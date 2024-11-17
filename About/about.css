@@ -106,7 +106,7 @@ nav {
    display: flex;
    flex-direction: row;
    width: 100%;
-   height: calc(100% - 90px);
+   min-height: calc(100vh - 90px);
 }
 
 .right {
@@ -362,8 +362,44 @@ footer {
 }
 
 @media screen and (min-width:320px) and (max-width:768px) {
+   .content {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      min-height: calc(100vh - 90px);
+   }
+
+   .right {
+      width: 100%;
+      height: 60%;
+   }
+
+   .left {
+      width: 100%;
+      height: 40%;
+   }
+
    footer {
-      height: 1000px;
+      height: 1050px;
+      margin-top: 20px;
+   }
+
+   .photo {
+      width: 100%;
+      height: 100%;
+   }
+
+   .photo img {
+      width: 400px;
+      height: fit-content;
+      margin-top: 10px;
+      margin-left: 43%;
+      border-radius: 24px;
+      padding: 2px;
+      object-fit: cover;
+      border: 1px solid black;
+      background-color: black;
+      transition: all 160ms linear;
    }
 
    .Top {
@@ -426,17 +462,17 @@ footer {
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: calc(100% - 90px);
+      min-height: calc(100% - 90px);
    }
 
    .right {
       width: 100%;
-      height: 100%;
+      height: 50%;
    }
 
    .left {
       width: 100%;
-      height: fit-content;
+      height: 50%;
    }
 
    .information {
@@ -481,7 +517,6 @@ footer {
    .photo {
       width: 100%;
       height: 100%;
-      /* background-color: black; */
    }
 
    .photo img {
